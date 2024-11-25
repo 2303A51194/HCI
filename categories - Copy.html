@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Categories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    nav .logo a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    nav .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav .nav-links li {
+      display: inline;
+    }
+
+    nav .nav-links a {
+      color: #fff;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    /* Categories Section */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .category-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-header {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .card-price {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Footer Styles */
+    .footer-container {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 0;
+    }
+
+    .footer-container h2, .footer-container h6, .footer-container p {
+      color: #fff;
+    }
+
+    .footer-container a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    .footer-container a:hover {
+      text-decoration: underline;
+    }
+
+    .copy-right {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #222;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="Priya.html">Priya Fashion</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Categories Section -->
+  <h1>Our Categories</h1>
+  <div class="category-section">
+    <!-- Women's Section -->
+    <div id="women-category">
+      <h2 class="category-header">Women's Clothing</h2>
+      <div class="product-grid">
+        <!-- Women Products -->
+        <div class="card" onclick="quickView('AKS Kurta with Plazzo & Dupatta', 'Rs. 1799')">
+          <img src="images/products-img/women/kurti1.png" alt="AKS Kurta">
+          <div class="card-body">
+            <h3 class="card-title">AKS Kurta with Plazzo & Dupatta</h3>
+            <p class="card-price">Rs. 1799</p>
+          </div>
+        </div>
+        <div class="card" onclick="quickView('Nayo Women Solid Kurta with Trouser', 'Rs. 1649')">
+          <img src="images/products-img/women/kurti2.png" alt="Nayo Solid Kurta">
+          <div class="card-body">
+            <h3 class="card-title">Nayo Women Solid Kurta with Trouser</h3>
+            <p class="card-price">Rs. 1649</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Men's Section -->
+    <div id="men-category" style="margin-top: 40px;">
+      <h2 class="category-header">Men's Clothing</h2>
+      <div class="product-grid">
+        <!-- Men Products -->
+        <div class="card" onclick="quickView('Men Shirt 1', 'Rs. 799')">
+          <img src="images/products-img/men/shirt1.png" alt="Shirt 1">
+          <div class="card-body">
+            <h3 class="card-title">Men Shirt 1</h3>
+            <p class="card-price">Rs. 799</p>
+          </div>
+        </div>
+        <div class="card" onclick="quickView('Men Shirt 2', 'Rs. 899')">
+          <img src="images/products-img/men/shirt2.png" alt="Shirt 2">
+          <div class="card-body">
+            <h3 class="card-title">Men Shirt 2</h3>
+            <p class="card-price">Rs. 899</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-container">
+    <div>
+      <h2>Priya Fashion</h2>
+      <p>Online Shopping for all your needs!</p>
+    </div>
+    <div>
+      <h6>Useful Links</h6>
+      <a href="#">FAQ</a><br>
+      <a href="#">Contact Us</a>
+    </div>
+    <div>
+      <p>100% Original Guarantee<br>Free Delivery Over Rs.999</p>
+    </div>
+  </div>
+  <p class="copy-right">© 2023 Priya Fashion</p>
+
+  <!-- Quick View Script -->
+  <script>
+    function quickView(title, price) {
+      alert(`Product: ${title}\nPrice: ${price}`);
+    }
+  </script>
+</body>
+</html>
